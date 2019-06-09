@@ -1,6 +1,5 @@
 package occmod.init.items;
 
-import occmod.Main;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
