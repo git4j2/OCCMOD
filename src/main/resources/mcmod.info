@@ -1,0 +1,16 @@
+[
+{
+  "modid": "occ",
+  "name": "Chicken Mod",
+  "description": "Jack's awesome Chicken Mod!",
+  "version": "${0.1}",
+  "mcversion": "${1.11.2}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["OCC - Fawz"],
+  "credits": "The Forge and FML guys, for making this example",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

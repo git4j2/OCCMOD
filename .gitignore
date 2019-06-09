@@ -1,0 +1,21 @@
+# eclipse
+bin
+*.launch
+.settings
+.metadata
+
+# idea
+out
+*.ipr
+*.iws
+*.iml
+.idea
+
+# gradle
+build
+.gradle
+
+# other
+eclipse
+run
+/Eclipse Java 2019-03.lnk
