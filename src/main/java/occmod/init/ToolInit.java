@@ -3,6 +3,7 @@ package occmod.init;
 import occmod.Main;
 import occmod.Reference;
 import occmod.init.tools.CustomAxe;
+import occmod.init.tools.CustomPickaxe;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
@@ -24,15 +25,15 @@ public class ToolInit {
     
         // PICKAXE RECIPE
     
-        /** GameRegistry.addRecipe(new ItemStack(occ_pickaxe, 1), new Object[]
+         GameRegistry.addRecipe(new ItemStack(chicken_pickaxe, 1), new Object[]
                 {
-                        "   ",
-                        "   ",
-                        "   ",
-                    'S', ItemInit.occitem_ingot,
+                        "SSS",
+                        " X ",
+                        " X ",
+                    'S', ItemInit.chicken_ingot,
                     'X', Items.STICK
                     
-                    }); **/
+                    }); 
                     
                     
          // SWORD RECIPE           
@@ -93,13 +94,15 @@ public class ToolInit {
     
     // TELLING MINECRAFT ABOUT YOUR TOOLS (SWORD. PICAXE. AXE, HOE, SHOVEL)
     
-public static final ToolMaterial chicken = EnumHelper.addToolMaterial("chicken", 2, 1000, 7.0F, 5.0F, 5);
+public static final ToolMaterial chicken = EnumHelper.addToolMaterial("chicken", 2, 1000, 10.0F, 5.0F, 5);
     
     public static Item chicken_axe;
+    public static Item chicken_pickaxe;
 
     public static void init() {
     
     	chicken_axe = new CustomAxe("chicken_axe", chicken);
+    	chicken_pickaxe = new CustomPickaxe("chicken_pickaxe", chicken);
         
     }
     
@@ -111,6 +114,7 @@ public static final ToolMaterial chicken = EnumHelper.addToolMaterial("chicken",
     
     public static void register() {
           registerItem(chicken_axe);
+          registerItem(chicken_pickaxe);
     }
     
     public static void registerItem(Item item) {
