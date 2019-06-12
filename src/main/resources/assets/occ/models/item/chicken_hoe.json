@@ -1,0 +1,9 @@
+{
+    "parent": "item/handheld",
+    "textures": {
+        "layer0": "occ:items/chicken_hoe"
+    }
+}
+
+
+

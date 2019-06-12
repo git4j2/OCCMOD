@@ -2,7 +2,9 @@ package occmod.init;
 
 import occmod.Main;
 import occmod.Reference;
+import occmod.init.items.CustomShovel;
 import occmod.init.tools.CustomAxe;
+import occmod.init.tools.CustomHoe;
 import occmod.init.tools.CustomPickaxe;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -13,6 +15,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraft.item.ItemSpade;
 
 public class ToolInit {
     
@@ -64,28 +67,28 @@ public class ToolInit {
         
          // SHOVEL RECIPE 
                                 
-         /** GameRegistry.addRecipe(new ItemStack(occ_shovel, 1), new Object[]
+          GameRegistry.addRecipe(new ItemStack(chicken_shovel, 1), new Object[]
                  {
-                         "   ",
-                         "   ",
-                         "   ",
-                      'S', ItemInit.occitem_ingot,
+                         " S ",
+                         " X ",
+                         " X ",
+                      'S', ItemInit.chicken_ingot,
                       'X', Items.STICK
                       
-                      }); **/
+                      });
                       
                       
           // HOE RECIPE
                                         
-          /** GameRegistry.addRecipe(new ItemStack(occ_hoe, 1), new Object[]
+           GameRegistry.addRecipe(new ItemStack(chicken_hoe, 1), new Object[]
                  {
-                         "   ",
-                         "   ",
-                         "   ",
-                      'S', ItemInit.occitem_ingot,
+                         "SS ",
+                         " X ",
+                         " X ",
+                      'S', ItemInit.chicken_ingot,
                       'X', Items.STICK
                       
-                      }); **/
+                      }); 
     }
     
     // -----------------------------------
@@ -98,11 +101,15 @@ public static final ToolMaterial chicken = EnumHelper.addToolMaterial("chicken",
     
     public static Item chicken_axe;
     public static Item chicken_pickaxe;
+    public static Item chicken_shovel;
+    public static Item chicken_hoe;
 
     public static void init() {
     
     	chicken_axe = new CustomAxe("chicken_axe", chicken);
     	chicken_pickaxe = new CustomPickaxe("chicken_pickaxe", chicken);
+    	chicken_shovel = new CustomShovel("chicken_shovel", chicken);
+    	chicken_hoe = new CustomHoe("chicken_hoe", chicken);
         
     }
     
@@ -115,6 +122,8 @@ public static final ToolMaterial chicken = EnumHelper.addToolMaterial("chicken",
     public static void register() {
           registerItem(chicken_axe);
           registerItem(chicken_pickaxe);
+          registerItem(chicken_shovel);
+          registerItem(chicken_hoe);
     }
     
     public static void registerItem(Item item) {
