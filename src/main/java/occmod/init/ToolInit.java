@@ -6,6 +6,7 @@ import occmod.init.items.CustomShovel;
 import occmod.init.tools.CustomAxe;
 import occmod.init.tools.CustomHoe;
 import occmod.init.tools.CustomPickaxe;
+import occmod.init.tools.CustomSword;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
@@ -41,15 +42,15 @@ public class ToolInit {
                     
          // SWORD RECIPE           
                     
-         /** GameRegistry.addRecipe(new ItemStack(occ_sword, 1), new Object[]
+          GameRegistry.addRecipe(new ItemStack(chicken_sword, 1), new Object[]
                 {
-                        "   ",
-                        "   " ,
-                        "   ",
-                     'S', ItemInit.occitem_ingot,
-                     'X', Items.STICK
+                        " S ",
+                        " S " ,
+                        " X ",
+                     'S', ItemInit.chicken_ingot,
+                     'X', Items.BLAZE_ROD
                      
-                    }); **/
+                    }); 
                     
           
          // AXE RECIPE 
@@ -97,12 +98,13 @@ public class ToolInit {
     
     // TELLING MINECRAFT ABOUT YOUR TOOLS (SWORD. PICAXE. AXE, HOE, SHOVEL)
     
-public static final ToolMaterial chicken = EnumHelper.addToolMaterial("chicken", 2, 1000, 10.0F, 5.0F, 5);
+public static final ToolMaterial chicken = EnumHelper.addToolMaterial("chicken", 2, 1000, 10.0F, 8.0F, 5);
     
     public static Item chicken_axe;
     public static Item chicken_pickaxe;
     public static Item chicken_shovel;
     public static Item chicken_hoe;
+    public static Item chicken_sword;
 
     public static void init() {
     
@@ -110,6 +112,7 @@ public static final ToolMaterial chicken = EnumHelper.addToolMaterial("chicken",
     	chicken_pickaxe = new CustomPickaxe("chicken_pickaxe", chicken);
     	chicken_shovel = new CustomShovel("chicken_shovel", chicken);
     	chicken_hoe = new CustomHoe("chicken_hoe", chicken);
+    	chicken_sword = new CustomSword("chicken_sword", chicken);
         
     }
     
@@ -124,6 +127,7 @@ public static final ToolMaterial chicken = EnumHelper.addToolMaterial("chicken",
           registerItem(chicken_pickaxe);
           registerItem(chicken_shovel);
           registerItem(chicken_hoe);
+          registerItem(chicken_sword);
     }
     
     public static void registerItem(Item item) {

@@ -1,5 +1,6 @@
 package occmod.handlers;
 
+import occmod.init.ArmourInit;
 import occmod.init.BlockInit;
 import occmod.init.ItemInit;
 import occmod.init.ToolInit;
@@ -9,6 +10,7 @@ public class RegistryHandler {
     public static void Client() {
     	ItemInit.register();
     	ToolInit.register();
+    	ArmourInit.register();
     	BlockInit.registerRenders();
     	
     }
@@ -17,6 +19,8 @@ public class RegistryHandler {
     	ItemInit.init();
     	BlockInit.init();
     	ToolInit.init();
+    	ArmourInit.init();
+    	ArmourInit.Recipitate();
     	BlockInit.register();
     	ItemInit.Recipitate();
     	BlockInit.Recipitate();
