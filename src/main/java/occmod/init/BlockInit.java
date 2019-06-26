@@ -41,7 +41,7 @@ public class BlockInit {
     
     public static void registerBlock(Block block) {
         GameRegistry.register(block);
-        block.setCreativeTab(CreativeTabs.DECORATIONS);
+        block.setCreativeTab(Main.chickentab);
         
         ItemBlock item = new ItemBlock(block);
         item.setRegistryName(block.getRegistryName());

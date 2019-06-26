@@ -132,7 +132,7 @@ public static final ToolMaterial chicken = EnumHelper.addToolMaterial("chicken",
     
     public static void registerItem(Item item) {
         GameRegistry.register(item);
-        item.setCreativeTab(CreativeTabs.TOOLS);
+        item.setCreativeTab(Main.chickentab);
         
         Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, 
         new ModelResourceLocation(Reference.MOD_ID + ":" + item.getUnlocalizedName().substring(5), "inventory"));

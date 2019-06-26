@@ -1,0 +1,27 @@
+Thu. 06/06/2019
+Lecture 13
+
+Note: Refer to the OCCSHOP.zip file (found in Resources from Lecture 3. Software Installation).
+
+Question: 
+Chicken Ingot does not appear in the inventory (not initialized)
+
+Answer (resolved by myself and posted in Q&A):
+There were no compile errors. However, the "Chicken Ingot" would not appear in the inventory. 
+My Dad spent some time debugging this issue and it turns out that the "chicken_ingot" was not being initialized. 
+Also, the mod info was not being properly displayed in the Mods area within Minecraft. 
+Could you please make a note for your audience? Otherwise, great job! Thanks!
+Ja-Ja
+
+1) Reference.java
+     Change... public static final String COMMON_PROXY = "occmod.proxies.ServerProxy";
+     To... public static final String COMMON_PROXY = "occmod.proxies.CommonProxy";
+
+2) Reference.java
+     Change... public static final String MOD_ID = "occmod";
+     To... public static final String MOD_ID = "occ";
+
+3) mcmod.info
+     Change... "modid": "occmod",
+     To... "modid": "occ",
+

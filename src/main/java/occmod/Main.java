@@ -1,5 +1,6 @@
 package occmod;
 
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -7,6 +8,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import occmod.proxies.CommonProxy;
+import occmod.tabs.ChickenTab;
 
 /*  MOD INFO */
 @Mod(modid = Reference.MOD_ID, name = Reference.NAME, version = Reference.VERSION)  
@@ -15,6 +17,11 @@ import occmod.proxies.CommonProxy;
 public class Main {
     
     // CREATIVE TAB INSTANTIATION
+	
+    public static Main instance;
+    public static final CreativeTabs chickentab = new ChickenTab("chickentab");
+    public static CreativeTabs chickentab_1;
+
     
     
 //PROXY INFO

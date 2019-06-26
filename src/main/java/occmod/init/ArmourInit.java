@@ -74,7 +74,7 @@ public class ArmourInit {
     
     public static final ArmorMaterial chicken_armour = EnumHelper.addArmorMaterial("chicken_armor", Reference.MOD_ID + ":chicken", 
                                                                                                                         35,                
-                                                                                                                        new int[]{5, 7, 8, 6},
+                                                                                                                        new int[]{25, 25, 25, 25},
                                                                                                                         10,
                                                                                                                         SoundEvents.ENTITY_CHICKEN_HURT,
                                                                                                                         2.5F);
@@ -107,7 +107,7 @@ public class ArmourInit {
     
     public static void registerItem(Item item) {
         GameRegistry.register(item);
-        item.setCreativeTab(CreativeTabs.COMBAT);
+        item.setCreativeTab(Main.chickentab);
         
         Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, 
         new ModelResourceLocation(Reference.MOD_ID + ":" + item.getUnlocalizedName().substring(5), "inventory"));
